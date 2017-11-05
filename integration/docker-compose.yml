@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  generator:    
+    image: my-registry:55000/gen:ci-7    
+  mail:
+    image: mailhog/mailhog   
+  integration:
+    image: my-registry:55000/gen:integration-7
+    build: .
